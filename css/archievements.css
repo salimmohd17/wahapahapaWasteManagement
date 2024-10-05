@@ -1,0 +1,188 @@
+.hover-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    }
+    
+    .hover-button:hover {
+    background-color: #8e44ad; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    }
+    
+    .dropdown {
+    display: inline-block;
+    position: relative;
+    right: 5px;
+    position: absolute;
+    top: 10px;
+    animation:changebackground 4s infinite;
+    }
+    @keyframes changebackground{
+    0%{
+        background-color: green;
+    }
+    25%{
+        background-color: rgb(4, 197, 4);
+    }
+    50%{
+        background-color:rgb(60, 141, 60);
+    }
+    75%{
+        background-color:rgb(14, 136, 14);
+    }
+    100%{background-color: green;
+    }
+    }
+    
+    
+    .menu {
+    display: none; 
+    flex-direction: column;
+    background-color: rgb(70, 70, 172);
+    border-radius: 20px;
+    box-shadow: inset;
+    position: absolute;
+    top:40px; 
+    right:5px;
+    z-index: 1;
+    width: 200px; 
+    padding: 10px 0;
+    animation:changebackground 4s infinite;
+    }
+    @keyframes changebackground{
+        0%{
+            background-color: green;
+        }
+        25%{
+            background-color: rgb(4, 197, 4);
+        }
+        50%{
+            background-color:rgb(60, 141, 60);
+        }
+        75%{
+            background-color:rgb(14, 136, 14);
+        }
+        100%{background-color: green;
+        }
+    }
+    
+    
+    
+    .menu a {
+    display: block;
+    color: #333; 
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    }
+    
+    .menu a:hover {
+    background-color: #3498db; 
+    color: white;
+    }
+    
+    .dropdown:hover .menu {
+    display: flex;
+    }
+    
+    @media (max-width: 768px) {
+    .hover-button {
+        width: 100%; 
+    }
+    
+    .menu {
+        width: 100%; 
+        right: 0;
+    }
+    }
+    
+body {
+    background: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8)), url("wastemanagement.jpg");
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #353f39;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #27ae60;
+    padding: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: #2ecc71;
+}
+.container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+h2 {
+    color: #27ae60;
+    font-size: 28px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+.achievements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.achievement {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+footer {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
