@@ -49,9 +49,8 @@
     
     
     .menu {
-    display: none; 
+        display: none; 
     flex-direction: column;
-    background-color: rgb(70, 70, 172);
     border-radius: 20px;
     box-shadow: inset;
     position: absolute;
@@ -60,45 +59,28 @@
     z-index: 1;
     width: 200px; 
     padding: 10px 0;
-    animation:changebackground 4s infinite;
-    }
-    @keyframes changebackground{
-        0%{
-            background-color: green;
-        }
-        25%{
-            background-color: rgb(4, 197, 4);
-        }
-        50%{
-            background-color:rgb(60, 141, 60);
-        }
-        75%{
-            background-color:rgb(14, 136, 14);
-        }
-        100%{background-color: green;
-        }
+    display: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     }
     
     
     
     .menu a {
-    display: block;
-    color: #333; 
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 16px;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: bold;
+        display: block;
+        color: black;
+        font-weight: bolder;
+        padding: 10px;
+        text-decoration: none;
     }
     
     .menu a:hover {
-    background-color: #3498db; 
-    color: white;
+        background-color: #1abc9c;
+        color: white;
     }
-    
     .dropdown:hover .menu {
-    display: flex;
+        display: block;
     }
     
     @media (max-width: 768px) {
@@ -120,6 +102,11 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    @media (max-width:768px){
+        .img{
+            width: 120px;
+        }
+    }
 }
 
 header {
@@ -243,4 +230,32 @@ footer .social-icons a:hover {
     .target-box p {
         font-size: 14px;
     }
+}
+.navigation-arrows{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+.arrow{
+    width: 60px;
+    height: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.arrow:hover{
+    background-color: #0056b3;
+}
+.arrow:active{
+    transform: scale(0.95);
 }

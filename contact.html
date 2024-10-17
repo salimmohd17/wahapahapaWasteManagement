@@ -8,11 +8,13 @@
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Company Logo">
-        <p>Contact Wahapahapa Waste Management for any enquiries.</p>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Company Logo" class="logo">
+        </div>
+        <p>Contact Wahapahapa Waste Management for any inquiries or support.</p>
         <div class="dropdown">
-            <button id="dropdownmenubutton"class="hover-button">Menu</button>
-            <div id="dropdownmenu" class="menu" style="display:none;">
+            <button id="dropdownmenubutton" class="hover-button">Menu</button>
+            <div id="dropdownmenu" class="menu">
                 <a href="site.html">Home</a>
                 <a href="doing.html">About Us</a>
                 <a href="contact.html">Contact</a>
@@ -20,19 +22,25 @@
                 <a href="help.html">Help</a>
             </div>
         </div>
+        <div class="navigation-arrows">
+            <button class="arrow" onclick="history.back()">&#8592;</button>
+            <button class="arrow" onclick="history.forward()">&#8594;</button>
+        </div>
     </header>
+
     <section class="contact-section">
         <h2>Contact Us</h2>
-        <p>We’d love to hear from you! Whether you have a question about our services, initiatives, or anything else, our team is ready to assist you. Also, any ideas are welcome. Remember: CLEAN TODAY, GREENER TOMORROW.</p> <!-- Corrected punctuation and capitalization -->
+        <p>We’d love to hear from you! Whether you have a question, feedback, or new ideas, our team is ready to assist.  
+           Join us in building a cleaner and greener future – because together, we make a difference!</p>
 
         <div class="contact-info">
             <div class="info-box">
                 <h3>Email</h3>
-                <p><a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapawastemanagement@gmail.com</a></p> <!-- Fixed email formatting -->
+                <p><a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapawastemanagement@gmail.com</a></p>
             </div>
             <div class="info-box">
                 <h3>Phone</h3>
-                <p><a href="tel:+254707776468">+254707776468</a></p>
+                <p><a href="tel:+254707776468">+254 707 776 468</a></p>
             </div>
             <div class="info-box">
                 <h3>Address</h3>
@@ -40,23 +48,33 @@
             </div>
         </div>
 
-        <form class="dataForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required><br>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br>
-    
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea><br>
-    
-            <button type="submit">Submit</button>
-        </form>
+        <div >
+            <h2>Contact Management</h2>
+
+            
+            <!-- <form action="https://docs.google.com/spreadsheets/d/1DPZ-_75D70BDHpFStPrKkX6uj6U2nBilstflMWLZgnw/edit?gid=0" 
+             -->
+           <form action=" https://script.google.com/macros/s/AKfycbx9nVn2xKsISdUMSuu5cz3siYfnwv2He6_HRy181UI/dev"
+           name="contactForm" 
+            method="post" >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required type="text" autocomplete="given-name" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required type="email" autocomplete="off" />>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
+
+                <button  type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Wahapahapa Waste Management. All rights reserved.</p>
     </footer>
+
     <script src="nio.js"></script>
 </body>
 </html>

@@ -1,3 +1,70 @@
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-button {
+        margin: 10px 0;
+    }
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+        .nav-button {
+            margin: 10px 0;
+        }
+    }
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("wastemanagement.jpg");
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+header {
+    background: #232324;
+    padding: 20px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.navigation-arrows{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+.arrow{
+    width: 60px;
+    height: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.arrow:hover{
+    background-color: #0056b3;
+}
+.arrow:active{
+    transform: scale(0.95);
+}
+
 .hover-button {
     background-color: #3498db;
     color: white;
@@ -41,23 +108,15 @@
     100%{background-color: green;
     }
     }
-    
-    
-    .menu {
-    display: none; 
-    flex-direction: column;
-    background-color: rgb(70, 70, 172);
-    border-radius: 20px;
-    box-shadow: inset;
-    position: absolute;
-    top:40px; 
-    right:5px;
-    z-index: 1;
-    width: 200px; 
-    padding: 10px 0;
-    animation:changebackground 4s infinite;
-    }
-    @keyframes changebackground{
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        position: absolute;
+        top: 10px;
+        animation:changebackground 4s infinite;
+        }
+        @keyframes changebackground{
         0%{
             background-color: green;
         }
@@ -72,68 +131,70 @@
         }
         100%{background-color: green;
         }
-    }
-    
-    
-    
-    .menu a {
-    display: block;
-    color: #333; 
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 16px;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: bold;
-    }
-    
-    .menu a:hover {
-    background-color: #3498db; 
-    color: white;
-    }
-    
-    .dropdown:hover .menu {
+        }
+        
+        
+        .menu {
+            display: none; 
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: inset;
+        position: absolute;
+        top:40px; 
+        right:5px;
+        z-index: 1;
+        width: 200px; 
+        padding: 10px 0;
+        display: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        }
+        
+        
+        
+        .menu a {
+            display: block;
+            color: black;
+            font-weight: bolder;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        .menu a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+        .dropdown:hover .menu {
+            display: block;
+        }
+        
+.buttons {
     display: flex;
-    }
-    
-    @media (max-width: 768px) {
-    .hover-button {
-        width: 100%; 
-    }
-    
-    .menu {
-        width: 100%; 
-        right: 0;
-    }
-    }
-    
-    
-    
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    justify-content: center;
+    gap: 20px;
+    background-color: #27ae5f79;
+    padding: 30px;
 }
 
-body {
-    background: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8)), url("wastemanagement.jpg");
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+.event-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-header {
-    background: #232324;
-    padding: 20px 0;
-    color: ffffff;
-    text-align: center;
+.event-button:hover {
+    background-color: #f5650577;
+    transform: translateY(-3px);
 }
 
-header h1 {
-    margin-bottom: 10px;
-}
 
 .hero {
     background: url('wastemanagement.jpg') no-repeat center center/cover;
@@ -141,7 +202,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
@@ -154,79 +215,120 @@ header h1 {
     font-size: 24px;
 }
 
-.events {
+.content-section {
+    display: none;
     padding: 40px 0;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    padding: 50px;
+    
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #2c3e50;
-}
-
-.event {
-    background:greenyellow ;
+#past-events {
+    background: whitesmoke;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: justify;
 }
-
-.event h3 {
-    margin-bottom: 10px;
-    color: green;
+#upcoming-events{
+    background: whitesmoke;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: justify;
 }
-
-.event p {
-    margin-bottom: 10px;
+#ongoing-projects{
+    background:whitesmoke;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+h3 {
+    color: orangered;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .event .btn {
-    display: inline-block;
     padding: 10px 20px;
     background-color: #3498db;
-    color: #fff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .event .btn:hover {
     background-color: #2ecc71;
 }
-
 footer {
     background: #2c3e50;
-    color: #fff;
+    color: white;
     padding: 20px 0;
     text-align: center;
 }
-
-footer p {
-    margin-bottom: 10px;
+.hero-content h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 68px;
+    color: rgb(29, 15, 2);
+    font-weight:bold ;
+    border-radius: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-    
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+.event-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight:bold ;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation:changebackground 4s infinite;
+}
+@keyframes changebackground{
+    0%{
+        background-color:rgb(139, 19, 39);
     }
-
-    .hero h2 {
-        font-size: 36px;
+    25%{
+        background-color: rgb(214, 27, 120);
     }
-
-    .hero p {
-        font-size: 18px;
+    50%{
+        background-color:rgb(131, 30, 114);
     }
+    75%{
+        background-color:rgb(175, 28, 102);
+    }
+    100%{background-color: rgb(184, 22, 76);
+    }
+}
 
-    .container {
-        width: 95%;
+.whole{
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+        .nav-button {
+            margin: 10px 0;
+        }
     }
 }

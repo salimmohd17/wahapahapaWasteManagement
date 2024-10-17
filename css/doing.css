@@ -11,39 +11,7 @@ hover-button {
     background-color: violet;
 }
 
-.dropdown {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 45px;
-}
 
-.dropdownmenu {
-    color: red;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 20px;
-    right: 5px;
-    color: goldenrod;
-    z-index: 1;
-}
-
-.menu a {
-    display: block;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.menu a:hover {
-    background-color: palevioletred;
-}
 
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("wastemanagement.jpg");
@@ -53,6 +21,11 @@ body {
     font-size: medium;
     font-style: italic;
     color: green;
+    @media (max-width:768px){
+        .img{
+            width: 120px;
+        }
+    }
 }
 
 h1 {
@@ -67,23 +40,19 @@ h1 {
     flex-direction: column;
     position: absolute;
 }
-img{
-    align-self: center;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
-    transition: opacity 0.3s ease-in-out,filter 0.3s ease-in-out;
-    border-radius: 250%;
-    object-fit: cover;
-    border-image-width: auto;
-    text-align: center;
-    margin-top: 20px;
-    height: 300px;
+.logo {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #4CAF50; 
+}
     @media (max-width:768px){
         .img{
             width: 120px;
         }
     }
-}
+
 .introduction{
     color:wheat;
     text-align: justify;
@@ -115,46 +84,14 @@ h2{
     }
     
     .dropdown {
-    display: inline-block;
-    position: relative;
-    right: 5px;
-    position: absolute;
-    top: 10px;
-    animation:changebackground 4s infinite;
-    }
-    @keyframes changebackground{
-    0%{
-        background-color: green;
-    }
-    25%{
-        background-color: rgb(4, 197, 4);
-    }
-    50%{
-        background-color:rgb(60, 141, 60);
-    }
-    75%{
-        background-color:rgb(14, 136, 14);
-    }
-    100%{background-color: green;
-    }
-    }
-    
-    
-    .menu {
-    display: none; 
-    flex-direction: column;
-    background-color: rgb(70, 70, 172);
-    border-radius: 20px;
-    box-shadow: inset;
-    position: absolute;
-    top:40px; 
-    right:5px;
-    z-index: 1;
-    width: 200px; 
-    padding: 10px 0;
-    animation:changebackground 4s infinite;
-    }
-    @keyframes changebackground{
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        position: absolute;
+        top: 10px;
+        animation:changebackground 4s infinite;
+        }
+        @keyframes changebackground{
         0%{
             background-color: green;
         }
@@ -169,5 +106,68 @@ h2{
         }
         100%{background-color: green;
         }
+        }
+        
+        
+        .menu {
+            display: none; 
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: inset;
+        position: absolute;
+        top:40px; 
+        right:5px;
+        z-index: 1;
+        width: 200px; 
+        padding: 10px 0;
+        display: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        }
+        
+        
+        
+        .menu a {
+            display: block;
+            color: black;
+            font-weight: bolder;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        .menu a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+        .dropdown:hover .menu {
+            display: block;
+        }
+    .navigation-arrows{
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 10px;
     }
-    
+    .arrow{
+        width: 60px;
+        height: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+    .arrow:hover{
+        background-color: #0056b3;
+    }
+    .arrow:active{
+        transform: scale(0.95);
+    } 

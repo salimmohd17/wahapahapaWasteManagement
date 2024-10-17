@@ -1,235 +1,187 @@
-.main {
-    background: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8)), url("wastemanagement.jpg");
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    background-size: cover;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container {
-    height: 50vh; 
-    background: url('wastemanagement.jpg') no-repeat center center;
-    background-size: cover;
+
+body.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('wastemanagement.jpg') no-repeat center center/cover;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header img {
+    width: 100px;
+}
+
+
+
+.logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-img{
-    align-self: center;
-opacity: 0.8;
-filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
-transition: opacity 0.3s ease-in-out,filter 0.3s ease-in-out;
-border-radius: 250%;
-object-fit: cover;
-border-image-width: auto;
-text-align: center;
-margin-top: 20px;
-height: 300px;
-@media (max-width:768px){
-    .img{
-        width: 120px;
-    }
-}
-}
-h1{
-    color: greenyellow;
-}
-p{
-    color: green;
+    margin-bottom: 20px; 
 }
 
-
-.show{
-    opacity: 0;
+.logo {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #4CAF50; 
 }
 
-.hover-button {
-background-color: #3498db;
-color: white;
-padding: 10px 20px; 
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease, transform 0.3s ease;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-font-size: 16px;
-font-weight: bold;
+nav.options a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.hover-button:hover {
-background-color: #8e44ad; 
-transform: translateY(-3px); 
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+nav.options a:hover {
+    color: #1abc9c;
 }
 
 .dropdown {
-display: inline-block;
-position: relative;
-right: 5px;
-position: absolute;
-top: 10px;
-animation:changebackground 4s infinite;
-}
-@keyframes changebackground{
-0%{
-    background-color: green;
-}
-25%{
-    background-color: rgb(4, 197, 4);
-}
-50%{
-    background-color:rgb(60, 141, 60);
-}
-75%{
-    background-color:rgb(14, 136, 14);
-}
-100%{background-color: green;
-}
+    position: relative;
+    right: -140px;
 }
 
+.hover-button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 .menu {
-display: none; 
-flex-direction: column;
-background-color: rgb(70, 70, 172);
-border-radius: 20px;
-box-shadow: inset;
-position: absolute;
-top:40px; 
-right:5px;
-z-index: 1;
-width: 200px; 
-padding: 10px 0;
-animation:changebackground 4s infinite;
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 40px;
+    right: 0;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-@keyframes changebackground{
-    0%{
-        background-color: green;
-    }
-    25%{
-        background-color: rgb(4, 197, 4);
-    }
-    50%{
-        background-color:rgb(60, 141, 60);
-    }
-    75%{
-        background-color:rgb(14, 136, 14);
-    }
-    100%{background-color: green;
-    }
-}
-
-
 
 .menu a {
-display: block;
-color: #333; 
-padding: 12px 16px;
-text-decoration: none;
-font-size: 16px;
-background-color: transparent;
-transition: background-color 0.3s ease, color 0.3s ease;
-font-weight: bold;
+    display: block;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .menu a:hover {
-background-color: #3498db; 
-color: white;
+    background-color: #1abc9c;
+    color: white;
+}
+.dropdown:hover .menu {
+    display: block;
 }
 
-.dropdown:hover .menu {
-display: flex;
+.navigation-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+.highlight {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: fadeIn 3s;
+}
+footer.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1abc9c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
-.hover-button {
-    width: 100%; 
-}
-
-.menu {
-    width: 100%; 
-    right: 0;
-}
-}
-
-.options{
-    display: flex; 
-justify-content: space-around;
-align-items: center;
-padding: 10px;
-border: 2px solid; 
-border-radius: 8px; 
-animation:changebackground 4s infinite;
-}
-@keyframes changebackground{
-    0%{
-        background-color: green;
-    }
-    25%{
-        background-color: rgb(4, 197, 4);
-    }
-    50%{
-        background-color:rgb(60, 141, 60);
-    }
-    75%{
-        background-color:rgb(14, 136, 14);
-    }
-    100%{background-color: green;
-    }
-}
-.nav-button{
-    text-decoration: none; 
-    padding: 10px 20px;
-    margin: 0 15px;  
-    color: pink; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
-    font-size:16px;
-    font-weight: bold;
-    position: relative;
-}
-    
-
-.nav-button::after{
-    content: " ▼";
-font-size: 12px;
-margin-left: 5px;
-color: pink;
-display:inline-block;
-}
-.nav-button:hover{
-    background-color: #2ecc71;
-color: white;
-} 
-@media (max-width: 600px) {
-    .navbar {
+    header {
         flex-direction: column;
     }
-    .nav-button {
-        margin: 10px 0;
+
+    .cta-buttons a {
+        width: 100%;
+        text-align: center;
     }
 }
-.social-footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding: 20px; 
-    
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
+.message-section {
+    background-color: #f9f9f9;
+    border: 2px solid #4CAF50; 
+    border-radius: 10px; 
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-
-.social-icon {
-    color: rgb(170, 15, 15); 
-    font-size: 38px; 
-    margin: 0 35px;
-    transition: color 0.3s ease;
-    font-weight: bolder;
-    
+.message-section p {
+    color: #333; 
 }
 
+.message-section h2 {
+    color: #4CAF50; 
+}
 
-.social-icon:hover {
-    color: #3498db;
+.message-section p span {
+    color: #4CAF50; 
+    font-weight: bold; 
+}
 
+.message-section p:first-of-type {
+    font-weight: bold; 
+    font-size: 28px;
 }

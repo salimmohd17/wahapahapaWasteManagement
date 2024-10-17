@@ -11,18 +11,28 @@ dropdownmenubutton.addEventListener('click', function(event) {
         }
     }, { once: true }); 
 });
-document.getElementById('dataForm').addEventListener('submit', function(e) {
+document.getElementById('contact-form').addEventListener('click', function(e) {
     e.preventDefault();  
 
-    
-    var formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
+    // Collect form data
+   
+  /*  var name = document.getElementById('name').value;
+       var email=document.getElementById('email').value;
+         var message= document.getElementById('message').value;*/
+         var name= "Try"
+         var email="nickeagle888@gmail.com"
+         var message="hi"
 
-    var webAppUrl = 'https://script.google.com/macros/s/AKfycbx9nVn2xKsISdUMSuu5cz3siYfnwv2He6_HRy181UI/dev';
+         if(name == "" && email=="" && message=="" ){
+            alert("Fill in the details before submiting");
+         }else{
+            const formData = {name,email,message }
 
+    // Replace with your actual web app URL from Apps Script
+    const webAppUrl =" https://script.google.com/macros/s/AKfycbx9nVn2xKsISdUMSuu5cz3siYfnwv2He6_HRy181UI/dev"
+    // Send data to Google Sheets
+   
+  try {
     fetch(webAppUrl, {
         method: 'POST',
         body: JSON.stringify(formData),
@@ -42,4 +52,52 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
         console.error('Error:', error);
         alert('There was an error submitting your data.');
     });
+  } catch (error) {
+    alert(error);
+  }
+
+
+
+   
+
+         }
+
+  
+   
+    
+
 });
+
+// Navigation functions
+function goback() {
+    window.history.back();
+}
+
+function goforwad() {
+    window.history.forward();
+}
+
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => section.style.display = 'none');
+
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+function goback(){
+    window.history.back();
+}
+function goforwad(){
+    window.history.forward();
+}
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => section.style.display = 'none');
+    
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+}
+    
