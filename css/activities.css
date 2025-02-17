@@ -1,3 +1,202 @@
+@media only screen and (max-width: 400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Hover button adjustments */
+    .hover-button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px; /* Smaller font size for smaller screens */
+        font-weight: bold;
+    }
+
+    .hover-button:hover {
+        background-color: #8e44ad; 
+        transform: translateY(-3px); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    }
+
+    /* Dropdown adjustments */
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        position: absolute;
+        top: 10px;
+        animation: changebackground 4s infinite;
+    }
+
+    @keyframes changebackground {
+        0% { background-color: green; }
+        25% { background-color: rgb(4, 197, 4); }
+        50% { background-color: rgb(60, 141, 60); }
+        75% { background-color: rgb(14, 136, 14); }
+        100% { background-color: green; }
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 20px;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        z-index: 1;
+        width: 100%; /* Full width for mobile */
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a {
+        display: block;
+        color: black;
+        font-weight: bolder;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #1abc9c;
+        color: white;
+    }
+
+    .dropdown:hover .menu {
+        display: block;
+    }
+
+    /* Body adjustments */
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .img {
+        width: 100px; /* Smaller image size */
+    }
+
+    /* Main header adjustments */
+    .main-header {
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .main-header h1 {
+        margin-bottom: 5px;
+        font-size: 20px; /* Smaller font size */
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        background-color: #2ecc71;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 14px; /* Smaller font size */
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: #f0f0f0;
+    }
+
+    /* Activities section adjustments */
+    .activities-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wastemanagement.jpg") no-repeat center center/cover;
+        background-color: white;
+        padding: 30px 10px; /* Smaller padding */
+        text-align: center;
+    }
+
+    .activities-section h2 {
+        color: #2ecc71;
+        font-size: 24px; /* Smaller font size */
+        margin-bottom: 15px;
+    }
+
+    .activities-section p {
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.4;
+        margin-bottom: 30px;
+        color: #84af0c;
+    }
+
+    /* Activity cards adjustments */
+    .activity-card {
+        width: 90%; /* Full width for small screens */
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .activity-card i {
+        font-size: 30px; /* Smaller icon size */
+    }
+
+    /* Call to action section adjustments */
+    .call-to-action {
+        background-color: #3498db;
+        color: white;
+        padding: 30px 15px; /* Smaller padding */
+        text-align: center;
+    }
+
+    .call-to-action h2 {
+        font-size: 24px; /* Smaller font size */
+        margin-bottom: 15px;
+    }
+
+    .call-to-action p {
+        font-size: 14px; /* Smaller font size */
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        background-color: #2ecc71;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .cta-button:hover {
+        background-color: #27ae60;
+    }
+
+    /* Navigation arrows adjustments */
+    .navigation-arrows {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px; /* Smaller gap */
+    }
+
+    .arrow {
+        width: 50px; /* Smaller arrow size */
+        height: 8px;
+        font-size: 16px; /* Smaller font size */
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

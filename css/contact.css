@@ -1,3 +1,95 @@
+@media only screen and (max-width: 400px) {
+  
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.4; /* Adjusted for better readability */
+      background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+      text-align: center;
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+  
+    header {
+      flex-direction: column; /* Stack elements vertically */
+      padding: 5px 10px;
+      text-align: center;
+    }
+  
+    .logo {
+      width: 120px; /* Reduced size for smaller screens */
+      height: 120px;
+      margin-bottom: 10px; /* Added spacing */
+    }
+  
+    .dropdown {
+      position: relative;
+      right: 0; /* Center aligned */
+      top: 10px;
+    }
+  
+    .hover-button {
+      padding: 8px 12px; /* Reduced padding */
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    .menu {
+      width: 120px; /* Smaller width for smaller screens */
+      padding: 5px 0; /* Reduced padding */
+    }
+  
+    .menu a {
+      font-size: 12px; /* Reduced font size */
+      padding: 8px; /* Reduced padding */
+    }
+  
+    .arrow {
+      padding: 8px; /* Reduced padding */
+      font-size: 14px; /* Reduced font size */
+    }
+  
+    .contact-section {
+      max-width: 100%; /* Ensure it fits within the screen */
+      margin: 20px auto; /* Reduced margin */
+      padding: 15px; /* Reduced padding */
+    }
+  
+    .contact-info {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+    }
+  
+    .info-box h3 {
+      font-size: 16px; /* Smaller font size */
+    }
+  
+    .contact-form form {
+      gap: 10px; /* Reduced gap between form elements */
+    }
+  
+    input, textarea {
+      padding: 8px; /* Reduced padding */
+      font-size: 14px; /* Reduced font size */
+    }
+  
+    button {
+      padding: 8px 10px; /* Reduced padding */
+      font-size: 14px; /* Reduced font size */
+    }
+  
+    footer {
+      margin-top: 20px; /* Reduced margin */
+      padding: 5px 0; /* Reduced padding */
+    }
+  
+    footer p {
+      font-size: 12px; /* Reduced font size */
+    }
+  
+    .alert {
+      font-size: 16px; /* Smaller font size */
+      padding: 8px 15px; /* Adjusted padding */
+    }
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -142,4 +234,14 @@ footer {
 
 footer p {
     margin: 0;
+}
+.alert{
+    width: 100%;
+    background-color: rgba(255, 192, 231, 0.39);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    display: none;
 }

@@ -1,3 +1,199 @@
+@media only screen and (max-width: 400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wastemanagement.jpg") no-repeat center center/cover;
+        color: white;
+        padding: 40px 10px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background: #3f4641;
+        padding: 15px 0;
+        color: white;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        font-size: 24px; /* Adjusted size for smaller screens */
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 14px; /* Adjusted size for smaller screens */
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 100px auto;
+        padding: 0 10px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: greenyellow;
+        font-size: 24px; /* Adjusted font size */
+        font-weight: bolder;
+        border-radius: 30%;
+        animation: changebackground 4s infinite;
+    }
+
+    .hover-button {
+        background-color: #3498db;
+        color: white;
+        padding: 8px 16px; /* Reduced padding for smaller screens */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px; /* Adjusted font size */
+        font-weight: bold;
+    }
+
+    .hover-button:hover {
+        background-color: #8e44ad; 
+        transform: translateY(-3px); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        position: absolute;
+        top: 10px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 20px;
+        position: absolute;
+        top: 40px; 
+        right: 5px;
+        width: 150px; /* Reduced width */
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a {
+        display: block;
+        color: black;
+        font-weight: bolder;
+        padding: 8px 12px; /* Reduced padding */
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #1abc9c;
+        color: white;
+    }
+
+    .dropdown:hover .menu {
+        display: block;
+    }
+
+    .target-section {
+        display: grid;
+        grid-template-columns: 1fr; /* Stacked layout on small screens */
+        gap: 10px;
+    }
+
+    .target-box {
+        background: #fff;
+        padding: 15px; /* Reduced padding */
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .target-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .target-box h3 {
+        font-size: 20px; /* Adjusted font size */
+        color: #2ecc71;
+        margin-bottom: 10px;
+    }
+
+    .target-box p {
+        font-size: 14px; /* Adjusted font size */
+        color: #666;
+        line-height: 1.6;
+    }
+
+    footer {
+        background: #2ecc71;
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    footer .social-icons {
+        margin: 10px 0;
+    }
+
+    footer .social-icons a {
+        color: white;
+        margin: 0 5px; /* Reduced spacing */
+        font-size: 16px; /* Adjusted font size */
+        transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+        color: #333;
+    }
+
+    .navigation-arrows {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px; /* Reduced gap */
+    }
+
+    .arrow {
+        width: 50px; /* Adjusted size */
+        height: 8px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 16px; /* Adjusted font size */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+
+    .arrow:hover {
+        background-color: #0056b3;
+    }
+
+    .arrow:active {
+        transform: scale(0.95);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;

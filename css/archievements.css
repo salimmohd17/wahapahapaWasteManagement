@@ -1,3 +1,143 @@
+@media only screen and (max-width: 400px) {
+    .hover-button {
+        background-color: #3498db;
+        color: white;
+        padding: 8px 16px; /* Adjusted for smaller screens */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px; /* Reduced font size */
+        font-weight: bold;
+        width: 90%; /* Make button take up most of the screen width */
+        margin: 0 auto; /* Center the button */
+    }
+
+    .hover-button:hover {
+        background-color: #8e44ad;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        position: absolute;
+        top: 10px;
+        animation: changebackground 4s infinite;
+    }
+
+    @keyframes changebackground {
+        0% { background-color: green; }
+        25% { background-color: rgb(4, 197, 4); }
+        50% { background-color: rgb(60, 141, 60); }
+        75% { background-color: rgb(14, 136, 14); }
+        100% { background-color: green; }
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: inset;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        z-index: 1;
+        width: 90%; /* Adjust the width to fit small screens */
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a {
+        display: block;
+        color: black;
+        font-weight: bolder;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #1abc9c;
+        color: white;
+    }
+
+    .dropdown:hover .menu {
+        display: block;
+    }
+
+    header {
+        padding: 15px 0; /* Adjusted for smaller screens */
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 20px; /* Reduced font size */
+    }
+
+    nav {
+        justify-content: space-around; /* Adjusted for small screens */
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 0 8px; /* Reduced margin */
+        font-size: 12px; /* Smaller font size */
+        padding: 8px 12px; /* Adjusted padding */
+    }
+
+    .container {
+        padding: 15px; /* Reduced padding */
+    }
+
+    .content {
+        padding: 15px; /* Adjusted padding */
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 18px; /* Reduced font size */
+    }
+
+    p {
+        font-size: 12px; /* Adjusted font size */
+        line-height: 1.4;
+    }
+
+    .achievements {
+        justify-content: space-between;
+    }
+
+    .achievement {
+        padding: 12px; /* Adjusted padding */
+        margin: 8px;
+        width: 48%; /* Adjusted width for small screens */
+    }
+
+    footer {
+        padding: 12px; /* Adjusted padding */
+    }
+
+    footer a {
+        margin: 0 6px; /* Adjusted margin */
+    }
+
+    .navigation-arrows {
+        top: 5px;
+        left: 5px;
+        gap: 8px;
+    }
+
+    .arrow {
+        width: 40px; /* Adjusted width */
+        height: 8px;
+        font-size: 14px; /* Reduced font size */
+    }
+}
+
 .hover-button {
     background-color: #3498db;
     color: white;

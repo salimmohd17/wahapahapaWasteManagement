@@ -1,3 +1,198 @@
+@media only screen and (max-width: 400px) {
+    /* Hover Button */
+    .hover-button {
+        background-color: #3498db;
+        color: white;
+        padding: 8px 16px; /* Reduced padding */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px; /* Smaller font size */
+        font-weight: bold;
+    }
+
+    .hover-button:hover {
+        background-color: #8e44ad;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Dropdown */
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        top: 10px;
+        animation: changebackground 4s infinite;
+    }
+
+    @keyframes changebackground {
+        0% { background-color: green; }
+        25% { background-color: rgb(4, 197, 4); }
+        50% { background-color: rgb(60, 141, 60); }
+        75% { background-color: rgb(14, 136, 14); }
+        100% { background-color: green; }
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: inset;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        z-index: 1;
+        width: 160px; /* Reduced width */
+        padding: 8px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a {
+        display: block;
+        color: black;
+        font-weight: bolder;
+        padding: 8px; /* Reduced padding */
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #1abc9c;
+        color: white;
+    }
+
+    .dropdown:hover .menu {
+        display: block;
+    }
+
+    /* Body */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #a79898;
+        color: #333;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%; /* Ensures full width on small screens */
+        margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+        background-color: #404b44;
+        padding: 10px 0; /* Reduced padding */
+        color: white;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px; /* Smaller font size */
+        letter-spacing: 1px;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wastemanagement.jpg") no-repeat center center/cover;
+        color: white;
+        padding: 60px 0; /* Reduced padding */
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 36px; /* Smaller font size */
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 16px; /* Smaller font size */
+        margin: 0;
+    }
+
+    /* Content Section */
+    .content {
+        padding: 30px 0; /* Reduced padding */
+    }
+
+    .content h3 {
+        color: green;
+        margin-bottom: 10px;
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .content p {
+        margin-bottom: 30px;
+        line-height: 1.6;
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 15px 0; /* Reduced padding */
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: #27ae60;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Span Styling */
+    span {
+        color: rgb(207, 99, 117);
+    }
+
+    /* Navigation Arrows */
+    .navigation-arrows {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px; /* Reduced gap */
+    }
+
+    .arrow {
+        width: 50px; /* Reduced width */
+        height: 8px; /* Reduced height */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px; /* Smaller font size */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+
+    .arrow:hover {
+        background-color: #0056b3;
+    }
+
+    .arrow:active {
+        transform: scale(0.95);
+    }
+
+}
+
 .hover-button {
     background-color: #3498db;
     color: white;

@@ -1,3 +1,69 @@
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: small;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #4CAF50;
+        margin: 10px auto;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .hover-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%; /* Ensure buttons don't overflow */
+    }
+
+    .menu {
+        width: 100%;
+        padding: 5px 0;
+        right: 0;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 8px;
+        font-size: 14px;
+    }
+
+    .services-section {
+        padding: 20px;
+    }
+
+    .services-list p {
+        font-size: 12px;
+        margin: 5px 0 15px;
+        line-height: 1.4;
+    }
+
+    .navigation-arrows {
+        top: 5px;
+        left: 5px;
+        gap: 5px;
+    }
+
+    .dropdown {
+        top: 5px;
+        width: auto;
+    }
+}
 
 .logo {
     width: 200px;

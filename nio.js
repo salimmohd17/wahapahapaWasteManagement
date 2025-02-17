@@ -11,63 +11,53 @@ dropdownmenubutton.addEventListener('click', function(event) {
         }
     }, { once: true }); 
 });
-document.getElementById('contact-form').addEventListener('click', function(e) {
-    e.preventDefault();  
 
-    // Collect form data
-   
-  /*  var name = document.getElementById('name').value;
-       var email=document.getElementById('email').value;
-         var message= document.getElementById('message').value;*/
-         var name= "Try"
-         var email="nickeagle888@gmail.com"
-         var message="hi"
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();  // Prevent form refresh
 
-         if(name == "" && email=="" && message=="" ){
-            alert("Fill in the details before submiting");
-         }else{
-            const formData = {name,email,message }
+  const data = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    message: document.getElementById('message').value.trim(),
+  };
 
-    // Replace with your actual web app URL from Apps Script
-    const webAppUrl =" https://script.google.com/macros/s/AKfycbx9nVn2xKsISdUMSuu5cz3siYfnwv2He6_HRy181UI/dev"
-    // Send data to Google Sheets
-   
-  try {
-    fetch(webAppUrl, {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
+  // Make sure this URL matches your Google Apps Script deployment URL.
+  const url = 'https://script.google.com/macros/s/AKfycbwvIvXgR0XRpu4TvenaEwKzL6-VxmzRol97Tvb7o0_k-O__XwXdvrTkt9u-UVAtmBg/exec';
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' },
+  })
     .then(response => response.json())
     .then(data => {
-        if (data.status === 'success') {
-            alert('Data successfully submitted to Google Sheets');
-        } else {
-            alert('Submission failed. Please try again.');
-        }
+      console.log('Response:', data);
+      if (data.status === 'success') {
+        alert('Message sent successfully!');
+        form.reset();  // Clear the form after successful submission
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error submitting your data.');
+      console.error('Error:', error);
+      alert('There was an error sending your message. Please try again later.');
     });
-  } catch (error) {
-    alert(error);
-  }
-
-
-
-   
-
-         }
-
-  
-   
-    
-
 });
-
+function doPost(e) {
+    const jsonResponse = { status: 'success', message: 'Data received' };
+    
+    return ContentService
+      .createTextOutput(JSON.stringify(jsonResponse))
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeaders({
+        'Access-Control-Allow-Origin': '*',  // Allow any origin
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      });
+  }
+  
 // Navigation functions
 function goback() {
     window.history.back();

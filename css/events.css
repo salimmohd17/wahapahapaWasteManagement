@@ -1,11 +1,74 @@
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
+@media only screen and (max-width: 400px) {
+    .navigation-arrows {
+        top: 5px;
+        left: 5px;
+        gap: 5px;
     }
-    .nav-button {
-        margin: 10px 0;
+
+    .arrow {
+        width: 40px;
+        height: 6px;
+        font-size: 12px;
     }
-   
+
+    .hover-button, .event-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px 5px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .menu a {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .buttons {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .content-section, #past-events, #upcoming-events, #ongoing-projects {
+        padding: 5%;
+        margin-bottom: 10%;
+        width: 90%;
+    }
+
+    .event-section {
+        width: 100%; /* Adjust width for smaller devices */
+        padding: 10px;
+        margin: 10px auto;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.4;
 }
 * {
     margin: 0;
