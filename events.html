@@ -1,333 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="css/events.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Wahapahapa Waste Management</title>
+  <meta name="description" content="Discover Wahapahapa Waste Management's clean-up drives, environmental activities, and sustainable community events across the coast." />
+  <link rel="icon" type="image/png" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <link rel="stylesheet" href="css/events.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
-<section class="whole">
-    <header>
-    <div class="dropdown">
-        <button id="dropdownmenubutton" class="hover-button">Menu</button>
-        <div id="dropdownmenu" class="menu">
-            <a href="site.html">Home</a>
-            <a href="doing.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="services.html">Services</a>
-            <a href="help.html">Help</a>
-        </div>
-    </div>
-
-    <div class="navigation-arrows">
-        <button class="arrow" onclick="goback()">&#8592;</button>
-        <button class="arrow" onclick="goforwad()">&#8594;</button>
-    </div>
-</header>
-
 <body>
-    <section class="hero">
-        <div class="hero-content">
-            <h2>EVENTS SECTION</h2>
-            <p>Join us in our mission to create a cleaner, greener community!</p>
-        </div>
-    </section>
+  <!-- HEADER -->
+ <header>
+    <a href="site.html" class="home-button" title="Go to Home">
+      <i data-lucide="home"></i>
+    </a>
 
-    <section class="buttons">
-        <button class="event-button" onclick="showSection('upcoming-events')">Upcoming Events</button>
-        <button class="event-button" onclick="showSection('past-events')">Past Events</button>
-        <button class="event-button" onclick="showSection('ongoing-projects')">Ongoing Projects</button>
-    </section>
-    <section class="event-section">
-        <section id="upcoming-events" class="content-section" style="display:none;">
-            
-                <h2>Upcoming Events</h2>
-        
-                <div class="event">
-                    <h3>Community Cleanup - Kombani</h3>
-                    <p><strong>Date:</strong> October 15, 2024</p>
-                    <p><strong>Location:</strong> Kombani Market</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        Join us in a community-driven cleanup event at Kombani Market aimed at restoring hygiene and aesthetics in the area. Volunteers will engage in waste collection, drain clearing, and educating vendors on proper waste management.  
-                        <ul>
-                            <li>Volunteers will receive free cleaning kits, including gloves and masks.</li>
-                            <li>A public address session will follow to raise awareness about proper waste disposal practices.</li>
-                            <li>Top-performing volunteers will be recognized for their contributions.</li>
-                        </ul>
-                        This event offers a great opportunity to network with other environmental enthusiasts and create a lasting impact.
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>Waste Management Workshop</h3>
-                    <p><strong>Date:</strong> October 22, 2024</p>
-                    <p><strong>Location:</strong> Tiwi Community Hall</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        This workshop will bring together environmental experts and local residents to explore **sustainable waste management solutions**. Participants will learn practical skills such as:
-                        <ul>
-                            <li>How to reduce, reuse, and recycle household waste.</li>
-                            <li>Best practices for composting organic waste.</li>
-                            <li>How to implement waste segregation in markets and public spaces.</li>
-                        </ul>
-                        Attendees will receive informational handouts, and refreshments will be provided.
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>Beach Cleanup - Diani Beach</h3>
-                    <p><strong>Date:</strong> November 5, 2024</p>
-                    <p><strong>Location:</strong> Beach</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        Help us protect our marine ecosystems by participating in this **beach cleanup event**. Volunteers will remove plastic waste, fishing gear, and other debris from the shoreline to prevent harm to aquatic life.  
-                        <ul>
-                            <li>Participants will receive eco-friendly T-shirts as a token of appreciation.</li>
-                            <li>Partner organizations will conduct a short session on the impact of marine pollution.</li>
-                            <li>Refreshments will be provided, followed by a group photo session.</li>
-                        </ul>
-                        This event is ideal for those who care deeply about protecting the environment and want to contribute to cleaner oceans.
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>Tree Planting Drive - Maganyakulo</h3>
-                    <p><strong>Date:</strong> November 12, 2024</p>
-                    <p><strong>Location:</strong> Maganyakulo Junction</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        Join us in planting trees along Maganyakulo Road as part of our **reforestation campaign** to combat deforestation and improve air quality. Volunteers will:
-                        <ul>
-                            <li>Plant indigenous tree species along the roadside.</li>
-                            <li>Learn about the importance of reforestation from experts.</li>
-                            <li>Receive tree planting certificates as a mark of participation.</li>
-                        </ul>
-                        This event is a meaningful way to leave a lasting impact and contribute to environmental restoration.
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>Bodaboda Operators’ Environmental Awareness Day</h3>
-                    <p><strong>Date:</strong> November 18, 2024</p>
-                    <p><strong>Location:</strong> Tiwi Town Square</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        This event targets **bodaboda operators** to raise awareness about how they can reduce environmental impact in their daily operations. The program will include:
-                        <ul>
-                            <li>Workshops on minimizing waste during transportation.</li>
-                            <li>Discussions on the importance of proper vehicle maintenance to reduce emissions.</li>
-                            <li>A free vehicle maintenance check for participating bodaboda operators.</li>
-                        </ul>
-                        Volunteers will assist in coordinating the event and engaging participants. We aim to build environmental champions among the bodaboda community.
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>Plastic-Free Market Day - Kwale Market</h3>
-                    <p><strong>Date:</strong> November 25, 2024</p>
-                    <p><strong>Location:</strong> Kwale Market</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        This event focuses on promoting **sustainable shopping practices** by reducing the use of single-use plastics in the market. Vendors will receive reusable cloth bags, and customers will be encouraged to bring their own bags.  
-                        <ul>
-                            <li>Eco-friendly bags will be distributed to the first 100 customers.</li>
-                            <li>Workshops on sustainable packaging solutions will be held for vendors.</li>
-                            <li>Volunteers will engage with shoppers to promote the benefits of reducing plastic waste.</li>
-                        </ul>
-                        Support us in making Kwale Market a model for plastic-free shopping!
-                    </p>
-                </div>
-        
-                <div class="event">
-                    <h3>End-of-Year Environmental Gala</h3>
-                    <p><strong>Date:</strong> December 15, 2024</p>
-                    <p><strong>Location:</strong> Villa Beach Resort</p>
-                    <p>
-                        <strong>Details:</strong>  
-                        The **End-of-Year Gala** will celebrate the achievements of our environmental initiatives throughout the year. This formal event will bring together stakeholders, volunteers, and donors to reflect on successes and plan for the coming year.  
-                        <ul>
-                            <li>Award ceremony recognizing top volunteers and donors.</li>
-                            <li>Presentations on project outcomes and future plans.</li>
-                            <li>Entertainment by local artists and a networking dinner.</li>
-                        </ul>
-                        This event offers a great opportunity for donors to see the impact of their contributions and for volunteers to feel appreciated.
-                    </p>
-                </div>
-            
-        </section>
-        
-    <section id="past-events" class="content-section" style="display:none;">
-        
-            <h2>Past Events</h2>
-    
-            <div class="event">
-                <h3>Environmental Day Cleanup - September 2024</h3>
-                <p><strong>Date:</strong> September 10, 2024</p>
-                <p><strong>Location:</strong> Kombani Town</p>
-                <p>
-                    <strong>Details:</strong> This large-scale event was part of a global initiative to celebrate Environmental Day. 
-                    Over 100 volunteers, including local leaders, youth groups, and business owners, participated in cleaning Kombani Town. 
-                    Volunteers collected plastic waste, cleared clogged drainage systems, and removed litter from public spaces such as markets and parks. 
-                    Educational stations were set up to teach participants about waste segregation and recycling. 
-                    The event ended with a tree-planting ceremony at the town center to symbolize the community’s commitment to sustainable living.
-                </p>
-            </div>
-    
-            <div class="event">
-                <h3>Beach Cleanup Drive - Tiwi Beach</h3>
-                <p><strong>Date:</strong> August 30, 2024</p>
-                <p><strong>Location:</strong> Tiwi Beach</p>
-                <p>
-                    <strong>Details:</strong> Volunteers gathered at Tiwi Beach for a cleanup aimed at reducing marine pollution. 
-                    Participants collected plastic bottles, fishing nets, and other debris that had washed up on the shoreline. 
-                    The event, organized in collaboration with local environmental organizations, also included an educational session 
-                    about the harmful effects of marine pollution on aquatic life. Participants were encouraged to adopt sustainable practices 
-                    such as reducing single-use plastics and disposing of waste responsibly. As a highlight, volunteers celebrated with a 
-                    group photo and refreshments after the cleanup.
-                </p>
-            </div>
-    
-            <div class="event">
-                <h3>Town Market Cleanup Campaign - Maganyakulo</h3>
-                <p><strong>Date:</strong> July 20, 2024</p>
-                <p><strong>Location:</strong> Maganyakulo Market</p>
-                <p>
-                    <strong>Details:</strong> The market cleanup campaign aimed to promote hygiene and waste management in the busy Maganyakulo market area. 
-                    Market vendors, residents, and local leaders actively participated in clearing waste from market stalls and public spaces. 
-                    Volunteers were provided with gloves, rakes, and brooms to clean various sections of the market. The event also featured 
-                    a public address session where health experts emphasized the importance of waste segregation and proper sanitation for 
-                    public health. Vendors were encouraged to adopt eco-friendly practices, such as offering reusable shopping bags.
-                </p>
-            </div>
-    
-            <div class="event">
-                <h3>Plastic Waste Recycling Workshop - Kwale Town Hall</h3>
-                <p><strong>Date:</strong> June 15, 2024</p>
-                <p><strong>Location:</strong> Kwale Town Hall</p>
-                <p>
-                    <strong>Details:</strong> This workshop was designed to teach participants how to recycle plastic waste into useful products 
-                    like eco-bricks, decorative flower pots, and reusable bags. Experts in waste management provided step-by-step demonstrations 
-                    on converting plastic waste into innovative items. Attendees were also introduced to the concept of eco-entrepreneurship, 
-                    encouraging them to explore small business opportunities through recycling. The event ended with participants forming 
-                    small teams to initiate neighborhood recycling initiatives in their respective communities.
-                </p>
-            </div>
-    
-            <div class="event">
-                <h3>Joint Cleanup Drive - Tiwi Fridays</h3>
-                <p><strong>Date:</strong> Recurring - Every Friday</p>
-                <p><strong>Location:</strong> Tiwi Town</p>
-                <p>
-                    <strong>Details:</strong> This ongoing collaborative cleanup brings together volunteers from Kombani, Maganyakulo, and Tiwi 
-                    every Friday. The teams focus on cleaning different sections of Tiwi, with tasks including waste collection, drain clearing, 
-                    and roadside beautification. The event aims to foster unity and shared responsibility among the towns. Volunteers 
-                    receive refreshments, and top-performing teams are recognized with small tokens of appreciation to encourage consistent participation. 
-                    These cleanups have significantly improved sanitation in Tiwi and inspired residents to maintain a cleaner environment throughout the week.
-                </p>
-            </div>
-        
-    </section>
-    <section id="ongoing-projects" class="content-section" style="display:none;">
-       
-            <h2>Ongoing Projects</h2>
-    
-            <div class="project">
-                <h3>1. School Awareness Campaign</h3>
-                <p>
-                    <strong>Details:</strong>  
-                    This campaign focuses on educating students in primary and secondary schools about **environmental conservation**, 
-                    **waste segregation**, and **eco-friendly practices**. The goal is to inspire the younger generation to develop 
-                    environmentally responsible behavior and become advocates for sustainable practices within their communities.  
-                    Activities include:
-                </p>
-                <ul>
-                    <li>Tree planting within school compounds.</li>
-                    <li>Workshops on waste management and recycling.</li>
-                    <li>Forming eco-clubs to lead green initiatives within the schools.</li>
-                </ul>
-                <p>We aim to empower students to become ambassadors of positive change, fostering a culture of environmental responsibility from a young age.</p>
-            </div>
-    
-            <div class="project">
-                <h3>2. Daily Town Cleanups</h3>
-                <p>
-                    <strong>Details:</strong>  
-                    Wahapahapa Waste Management organizes **daily town cleanups** to ensure the streets, markets, and public spaces remain clean and hygienic. 
-                    Our teams, made up of volunteers and staff, cover key areas such as Kombani, Tiwi, and Maganyakulo. This project not only keeps 
-                    the environment clean but also raises awareness among residents about the importance of waste disposal and sustainable living.
-                </p>
-                <ul>
-                    <li>Target areas include markets, public parks, drainage systems, and bus stops.</li>
-                    <li>Volunteers are provided with gloves, masks, brooms, and trash bags.</li>
-                    <li>Community members are encouraged to join the effort and make cleanliness a shared responsibility.</li>
-                </ul>
-                <p>By ensuring that these cleanups happen every day, we are building a habit of cleanliness and encouraging community pride in maintaining a healthy environment.</p>
-            </div>
-    
-            <div class="project">
-                <h3>3. Plastic-Free Market Initiative</h3>
-                <p>
-                    <strong>Details:</strong>  
-                    This initiative promotes the reduction of **single-use plastics** in local markets by encouraging vendors and customers to adopt reusable alternatives. 
-                    We are working closely with market leaders and vendors to replace plastic bags with **eco-friendly cloth bags** and **paper alternatives**. 
-                    Awareness campaigns are held weekly to educate customers about the environmental benefits of reducing plastic use.
-                </p>
-                <ul>
-                    <li>Eco-friendly bag distribution programs for customers and vendors.</li>
-                    <li>Workshops for market vendors on waste reduction practices.</li>
-                    <li>Incentive programs offering rewards to vendors who switch to sustainable packaging.</li>
-                </ul>
-                <p>This project has already gained significant traction, with several vendors actively participating in the transition to plastic-free operations.</p>
-            </div>
-    
-            <div class="project">
-                <h3>4. Recycling and Upcycling Initiative</h3>
-                <p>
-                    <strong>Details:</strong>  
-                    This project focuses on collecting recyclable materials, such as plastics and glass, from markets and households. 
-                    Our goal is to **reduce waste sent to landfills** by recycling these materials and turning them into useful products. 
-                    We also organize upcycling workshops where participants learn to transform discarded items into valuable products, 
-                    such as eco-bricks, flower pots, and reusable bags.
-                </p>
-                <ul>
-                    <li>Weekly collection of recyclables from households and businesses.</li>
-                    <li>Training on upcycling techniques for youth and community members.</li>
-                    <li>Collaboration with artisans to develop eco-friendly products.</li>
-                </ul>
-                <p>This initiative promotes entrepreneurship while reducing environmental pollution, contributing to a sustainable circular economy.</p>
-            </div>
-    
-            <div class="project">
-                <h3>5. Community Engagement and Awareness Drives</h3>
-                <p>
-                    <strong>Details:</strong>  
-                    Our team conducts **community awareness campaigns** focusing on the benefits of sustainable waste management and environmental conservation. 
-                    We partner with local organizations, youth groups, and businesses to amplify our impact. Regular cleanups and campaigns are conducted in 
-                    public spaces to engage the public directly.
-                </p>
-                <ul>
-                    <li>Public awareness sessions on environmental conservation.</li>
-                    <li>Door-to-door education drives to promote proper waste disposal.</li>
-                    <li>Collaboration with businesses and local leaders to adopt green practices.</li>
-                </ul>
-                <p>By engaging with the community consistently, we aim to build a strong sense of environmental responsibility among residents.</p>
-            </div>
-        
-    </section>
-    
-</section>
-</body>
-
-<script src="nio.js"></script>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Wahapahapa Waste Management</p>
+    <div class="header-content">
+      <h1><i data-lucide="calendar-days"></i> Our Events & Activities</h1>
+      <p><i data-lucide="leaf"></i> Join us in building cleaner, greener, and more sustainable communities across the coast.</p>
     </div>
-</footer>
+  </header>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+
+<section class="events-section">
+  <h2>Upcoming & Recent Events</h2>
+  <div class="event-grid">
+    <div class="event-card">
+      <img src="images/cleanup.jpg" alt="Community Cleanup">
+      <div class="event-info">
+        <h3><i data-lucide="broom"></i> Town Cleanup Drive</h3>
+        <p>Join our community cleanup from Waa to Kombani as we beautify our streets and promote waste awareness.</p>
+        <span class="date"><i data-lucide="calendar"></i> 8th November 2025</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/treeplant.jpg" alt="Tree Planting">
+      <div class="event-info">
+        <h3><i data-lucide="sprout"></i> Tree Planting Day</h3>
+        <p>Let’s restore our environment! We’ll plant 500+ trees along Tiwi roads and beach areas.</p>
+        <span class="date"><i data-lucide="calendar"></i> 15th December 2025</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/recycleexpo.jpg" alt="Recycling Exhibition">
+      <div class="event-info">
+        <h3><i data-lucide="recycle"></i> Zero Waste Exhibition</h3>
+        <p>Come see creative items made from recycled waste and learn about sustainable living.</p>
+        <span class="date"><i data-lucide="calendar"></i> 22nd January 2026</span>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="past-events-gallery">
+  <h2>Past Events Highlights</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/cleanupday.jpg" alt="Cleanup Drive">
+      <div class="overlay">
+        <h3>Town Cleanup 2025</h3>
+        <p>Over 200 volunteers joined to clean Kombani streets and markets.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/treeplant2024.jpg" alt="Tree Planting">
+      <div class="overlay">
+        <h3>Tree Planting 2024</h3>
+        <p>Planted 500+ trees across Tiwi Beach and schools.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/recycleexpo2024.jpg" alt="Recycling Expo">
+      <div class="overlay">
+        <h3>Zero Plastic Expo</h3>
+        <p>Exhibited creative items made from recycled waste.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/awarenesswalk.jpg" alt="Awareness Walk">
+      <div class="overlay">
+        <h3>Waste Awareness Walk</h3>
+        <p>Educating the public about sorting waste responsibly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-more">
+  <a href="past events.html" class="view-more-btn">
+    <i data-lucide="image"></i> View More Photos
+  </a>
+</div>
+
+</section>
+
+<script> lucide.createIcons(); </script>
+
+<section class="ongoing-activities">
+  <h2 class="section-title">Ongoing Activities</h2>
+  <div class="activity-list">
+    
+    <div class="activity-card hidden">
+      <img src="images/sweeping.jpg" alt="Daily Sweeping">
+      <div class="activity-info">
+        <i class="fas fa-broom"></i>
+        <h3>Daily Sweeping</h3>
+        <p>Our teams conduct early morning sweeping across markets, streets, and estates to maintain a clean and healthy environment.</p>
+      </div>
+    </div>
+
+    <div class="activity-card hidden">
+      <img src="images/skipbins.jpg" alt="Skip Bin Management">
+      <div class="activity-info">
+        <i class="fas fa-dumpster"></i>
+        <h3>Skip Bin Management</h3>
+        <p>We regularly collect and manage skip bins around Kombani, Tiwi, and Maganyakulo to prevent waste overflow and pollution.</p>
+      </div>
+    </div>
+
+    <div class="activity-card hidden">
+      <img src="images/slashing.jpg" alt="Slashing and Beautification">
+      <div class="activity-info">
+        <i class="fas fa-leaf"></i>
+        <h3>Slashing & Beautification</h3>
+        <p>Our youth teams trim overgrown grass and beautify roadsides, making our towns cleaner, safer, and greener for all.</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+       <img src="images/awarenss.jpg" alt="community awareness">
+       <div class="activity-info"></div>
+      <i data-lucide="megaphone"></i>
+      <h3>Community Awareness</h3>
+      <p>We engage locals through one-on-one awareness and school programs promoting sustainable waste habits.</p>
+    </div>
+    </div>
+
+
+  </div>
+</section>
+
+<script>
+const cards = document.querySelectorAll('.activity-card');
+const title = document.querySelector('.section-title');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains('section-title')) {
+        entry.target.classList.add('glow');
+      } else {
+        setTimeout(() => entry.target.classList.add('show'), index * 200);
+      }
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(title);
+cards.forEach(card => observer.observe(card));
+</script>
+
+
+  <!-- CTA SECTION -->
+  <section class="cta">
+    <h2>Be Part of Our Next Event</h2>
+    <p>Together we can create a cleaner and more sustainable future for all.</p>
+    <div class="cta-buttons">
+      <a href="suport.html" class="btn donate">Donate</a>
+      <a href="contact.html" class="btn volunteer">Volunteer</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+    <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+              <h3>Wahapahapa Waste Management</h3>
+              <p>Wahapahapa is a youth-led initiative from Kwale County, Kenya, dedicated to community-led waste collection, environmental conservation, and youth empowerment through sustainable development.</p>
+            </div>
+            <div class="footer-column">
+              <h3>Connect With Us</h3>
+              <p>
+                Address: P.O. Box 161-80403, Kombani, Kwale<br>
+                Phone: +254 707776468<br>
+                Email 1: <a href="mailto:info@wahapaha .org">info@wahapahapa.org</a><br>
+                Email 2: <a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapaWasteManagementgmail.com</a>
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3>Important Links</h3>
+              <p>
+                <a href="media gallery.html">EVENTS PICTURES</a><br>
+              </p>
+            </div>
+          </div>
+        
+          <!-- Bottom Footer: Social Icons and Copyright -->
+          <div class="footer-bottom">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+              <a href="imprint.html">Imprint</a> |
+              <a href="privacypolicy.html">Privacy Policy</a> |
+              <a href="contact.html">Contact</a> |
+              <a href="#">Newsletter</a>
+            </div>
+            <p>© Copyright WAHAPAHAPA WASTE MANAGEMENT 2025, All Rights Reserved</p>
+            <a href="site.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+          </div>
+      </footer>
+
+  <script src="nio.js"></script>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      document.querySelectorAll('.event-button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
 </html>
-
-

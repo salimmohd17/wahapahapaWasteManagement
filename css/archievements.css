@@ -138,98 +138,8 @@
     }
 }
 
-.hover-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    font-weight: bold;
-    }
-    
-    .hover-button:hover {
-    background-color: #8e44ad; 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    }
-    
-    .dropdown {
-        display: inline-block;
-        position: relative;
-        right: 5px;
-        position: absolute;
-        top: 10px;
-        animation:changebackground 4s infinite;
-        }
-        @keyframes changebackground{
-        0%{
-            background-color: green;
-        }
-        25%{
-            background-color: rgb(4, 197, 4);
-        }
-        50%{
-            background-color:rgb(60, 141, 60);
-        }
-        75%{
-            background-color:rgb(14, 136, 14);
-        }
-        100%{background-color: green;
-        }
-        }
-        
-        
-        .menu {
-            display: none; 
-        flex-direction: column;
-        border-radius: 20px;
-        box-shadow: inset;
-        position: absolute;
-        top:40px; 
-        right:5px;
-        z-index: 1;
-        width: 200px; 
-        padding: 10px 0;
-        display: none;
-            background-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        
-        }
-        
-        
-        
-        .menu a {
-            display: block;
-            color: black;
-            font-weight: bolder;
-            padding: 10px;
-            text-decoration: none;
-        }
-        
-        .menu a:hover {
-            background-color: #1abc9c;
-            color: white;
-        }
-        .dropdown:hover .menu {
-            display: block;
-        }
-        
-    
-    @media (max-width: 768px) {
-    .hover-button {
-        width: 100%; 
-    }
-    
-    .menu {
-        width: 100%; 
-        right: 0;
-    }
-    }
-    
+
+
 body {
     background: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8)), url("wastemanagement.jpg");
     font-family: Arial, sans-serif;
@@ -243,15 +153,108 @@ body {
 }
 }
 header {
-    background-color: #353f39;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+      background-color: #1e1e1e;
+      color: white;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    /* Fade and bounce animation */
+    @keyframes fadeBounce {
+      0% { opacity: 0; transform: translateY(-15px); }
+      50% { opacity: 1; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1, header p, header i {
+      opacity: 0;
+      animation: fadeBounce 0.9s ease forwards;
+    }
+
+    header h1 {
+      animation-delay: 0.2s;
+    }
+
+    header p {
+      animation-delay: 0.5s;
+    }
+
+    header i {
+      animation-delay: 0.1s;
+      color: #FF6A00;
+      transition: all 0.3s ease;
+    }
+
+    header i:hover {
+      color: #ff8533;
+      text-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+      transform: scale(1.2);
+    }
+
+    /* Home button floating */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #FF6A00;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 1001;
+    }
+
+    .home-button:hover {
+      background-color: #eb4a0b;
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0;
+      color: whitesmoke;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+      header p {
+        font-size: 14px;
+      }
+    }
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .home-icon {
+    font-size: 22px;
+  }
 }
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
+
 nav {
     display: flex;
     justify-content: center;
@@ -351,4 +354,117 @@ footer a {
 }
 .arrow:active{
     transform: scale(0.95);
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 2rem;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    border-bottom: 1px solid #444;
+  }
+
+  .footer-column {
+    flex: 1 1 30%;
+    margin: 1rem;
+    min-width: 220px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .footer-column p, .footer-column a {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-decoration: none;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #000;
+    color: #ccc;
+    font-size: 0.85rem;
+    border-top: 1px solid #333;
+  }
+
+  .footer-bottom .social-icons {
+    margin: 1rem 0;
+  }
+
+  .footer-bottom .social-icons a {
+    margin: 0 10px;
+    color: #f07b28;
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom a {
+    color: #ccc;
+    margin: 0 0.5rem;
+  }
+
+  .footer-bottom a:hover {
+    color: #fff;
+  }
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: orange;
+    color: white;
+    padding: 0.5rem 0.6rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .back-to-top:hover {
+    background: darkorange;
+  }
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .footer-column {
+      margin-bottom: 1.5rem;
+    }
+  }
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        text-align: center;
+    }
 }

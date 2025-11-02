@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>archivements</title>
+    <meta name="description" content="Discover Wahapahapa Waste Management's clean-up drives, environmental activities, and sustainable community events across the coast." />
+  <link rel="icon" type="image/png" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.png" />
     <link rel="stylesheet" href="css/archievements.css"> 
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<header>
-    <div class="dropdown">
-        <button id="dropdownmenubutton" class="hover-button">Menu</button>
-        <div id="dropdownmenu" class="menu" style="display:none;">
-            <a href="site.html">Home</a>
-            <a href="doing.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="services.html">Services</a>
-            <a href="help.html">Help</a>
-        </div>
-    </div> 
-    <div class="navigation-arrows">
-        <button class="arrow"onclick="goback()">&#8592</button>
-        <button class="arrow" onclick="goforwad()">&#8594</button>
-    </div>
+
+<header class="achievements-header">
+  <a href="site.html" class="home-button" title="Go to Home">
+    <i data-lucide="home"></i>
+  </a>
+
+  <div class="header-content">
+    <h1><i data-lucide="award"></i> Achievements & Milestones</h1>
+    <p><i data-lucide="sparkles"></i> Celebrating our impactful progress and community-driven success stories in waste management.</p>
+  </div>
 </header>
+
+<script>
+  lucide.createIcons();
+</script>
+
+
 <body>
     <nav>
         <a href="#impacts">Environmental Impacts</a>
@@ -65,9 +72,49 @@
         <div class="content" id="join">
             <h2>Join Us</h2>
             <p>Want to make a difference? Become a part of our team of volunteers and help us continue creating a cleaner, greener community. Your support, whether through volunteering or donating, will directly impact our ability to carry out clean-ups, educate communities, and expand our waste management initiatives.</p>
-            <p><a href="mailto:wahapahapawastemanagement@gmail.com" class="hover-button">Contact Us to Volunteer</a></p>
+            <p><a href=contact.html class="hover-button">Contact Us to Volunteer</a></p>
         </div>
     </div>
+     <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+              <h3>Wahapahapa Waste Management</h3>
+              <p>Wahapahapa is a youth-led initiative from Kwale County, Kenya, dedicated to community-led waste collection, environmental conservation, and youth empowerment through sustainable development.</p>
+            </div>
+            <div class="footer-column">
+              <h3>Connect With Us</h3>
+              <p>
+                Address: P.O. Box 161-80403, Kombani, Kwale<br>
+                Phone: +254 707776468<br>
+                Email 1: <a href="mailto:info@wahapaha .org">info@wahapahapa.org</a><br>
+                Email 2: <a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapaWasteManagementgmail.com</a>
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3>Important Links</h3>
+              <p>
+                <a href="media gallery.html">EVENTS PICTURES</a><br>
+              </p>
+            </div>
+          </div>
+        
+          <!-- Bottom Footer: Social Icons and Copyright -->
+          <div class="footer-bottom">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+              <a href="imprint.html">Imprint</a> |
+              <a href="privacypolicy.html">Privacy Policy</a> |
+              <a href="contact.html">Contact</a> |
+              <a href="#">Newsletter</a>
+            </div>
+            <p>© Copyright WAHAPAHAPA WASTE MANAGEMENT 2025, All Rights Reserved</p>
+            <a href="site.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+          </div>
+      </footer>
    <script src="nio.js"></script>
 </body>
 </html>
