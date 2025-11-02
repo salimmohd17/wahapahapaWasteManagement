@@ -178,7 +178,7 @@ header {
     padding: 10px;
     cursor: pointer;
 }
-
+/*
 .contact-section {
     max-width: 800px;
     margin: 40px auto;
@@ -210,7 +210,110 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+*/
+#contact {
+  background: #222;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
 
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #d88a14;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-form {
+  flex: 1;
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #d88a14;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #d88a14;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #b87210;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links a:nth-child(1):hover { color: #25D366; } /* WhatsApp */
+.social-links a:nth-child(2):hover { color: #1877F2; } /* Facebook */
+.social-links a:nth-child(3):hover { color: #1DA1F2; } /* Twitter */
+.social-links a:nth-child(4):hover { color: #E4405F; } /* Instagram */
+.social-links a:nth-child(5):hover { color: #0077B5; } /* LinkedIn */
+.social-links a:nth-child(6):hover { color: #171515; } /* GitHub */
+/*
 button {
     background-color: #00796b;
     color: white;
@@ -224,7 +327,7 @@ button {
 button:hover {
     background-color: #004d40;
 }
-
+*/
 footer {
     margin-top: 30px;
     padding: 10px 0;

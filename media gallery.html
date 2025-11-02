@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/media gallery.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Media Gallery | Wahapahapa Waste Management</title>
+</head>
+<body>
+
+  <h1>Media Gallery</h1>
+
+  <h2>Photos</h2>
+  <div class="media-grid" id="photo-grid">
+    <div class="media-item">
+      <img src="images/ukundaevent.jpg" alt="Community cleanup" />
+    </div>
+    <div class="media-item">
+      <img src="images/photo2.jpg" alt="Tree planting" />
+    </div>
+    <div class="media-item">
+      <img src="images/photo3.jpg" alt="Youth group engagement" />
+    </div>
+    <div class="media-item">
+      <img src="images/photo4.jpg" alt="Market cleanup" />
+    </div>
+    <!-- more images as needed -->
+  </div>
+
+  <h2>Videos</h2>
+  <div class="media-grid" id="video-grid">
+    <div class="media-item video">
+      <video src="images/video.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="media-item video">
+      <video src="videos/treeplanting.mp4" muted preload="metadata"></video>
+    </div>
+    <!-- Add more videos as needed -->
+  </div>
+
+  <!-- Lightbox for viewing media -->
+  <div id="lightbox">
+    <div id="lightbox-content">
+      <span id="lightbox-close">&times;</span>
+      <!-- Media will be cloned here -->
+    </div>
+  </div>
+
+  <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+              <h3>Wahapahapa Waste Management</h3>
+              <p>Wahapahapa is a youth-led initiative from Kwale County, Kenya, dedicated to community-led waste collection, environmental conservation, and youth empowerment through sustainable development.</p>
+            </div>
+            <div class="footer-column">
+              <h3>Connect With Us</h3>
+              <p>
+                Address: P.O. Box 161-80403, Kombani, Kwale<br>
+                Phone: +254 707776468<br>
+                Email 1: <a href="mailto:info@wahapaha .org">info@wahapahapa.org</a><br>
+                Email 2: <a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapaWasteManagementgmail.com</a>
+              </p>
+            </div>
+            <div class="footer-column">
+              <h3>Important Links</h3>
+              <p>
+                <a href="#">EVENTS PICTURES</a><br>
+              </p>
+            </div>
+          </div>
+        
+          <!-- Bottom Footer: Social Icons and Copyright -->
+          <div class="footer-bottom">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+              <a href="imprint.html">Imprint</a> |
+              <a href="privacypolicy.html">Privacy Policy</a> |
+              <a href="contact.html">Contact</a> |
+              <a href="#">Newsletter</a>
+            </div>
+            <p>© Copyright WAHAPAHAPA WASTE MANAGEMENT 2025, All Rights Reserved</p>
+            <a href="site.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+          </div>
+      </footer>
+    </div>
+
+  <script>
+    // Elements
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    // Open lightbox with clicked media
+    document.querySelectorAll('.media-item img, .media-item video').forEach(media => {
+      media.addEventListener('click', () => {
+        // Clear previous content except close button
+        Array.from(lightboxContent.children).forEach(child => {
+          if(child !== lightboxClose) child.remove();
+        });
+
+        let clone;
+        if(media.tagName === 'IMG') {
+          clone = media.cloneNode();
+          clone.removeAttribute('style'); // Keep original styling
+        } else if(media.tagName === 'VIDEO') {
+          clone = document.createElement('video');
+          clone.src = media.src;
+          clone.controls = true;
+          clone.autoplay = true;
+          clone.style.maxHeight = "80vh";
+          clone.style.maxWidth = "80vw";
+        }
+
+        lightboxContent.appendChild(clone);
+        lightbox.classList.add('active');
+      });
+    });
+
+    // Close lightbox
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      // Pause video if any playing
+      const video = lightboxContent.querySelector('video');
+      if(video) video.pause();
+    });
+
+    // Also close lightbox if clicking outside the content
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) {
+        lightbox.classList.remove('active');
+        const video = lightboxContent.querySelector('video');
+        if(video) video.pause();
+      }
+    });
+  </script>
+
+</body>
+</html>

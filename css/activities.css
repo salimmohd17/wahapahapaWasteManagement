@@ -203,98 +203,51 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-.hover-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    font-weight: bold;
-    }
-    
-    .hover-button:hover {
-    background-color: #8e44ad; 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    }
+
     
     .dropdown {
-        display: inline-block;
-        position: relative;
-        right: 5px;
-        position: absolute;
-        top: 10px;
-        animation:changebackground 4s infinite;
-        }
-        @keyframes changebackground{
-        0%{
-            background-color: green;
-        }
-        25%{
-            background-color: rgb(4, 197, 4);
-        }
-        50%{
-            background-color:rgb(60, 141, 60);
-        }
-        75%{
-            background-color:rgb(14, 136, 14);
-        }
-        100%{background-color: green;
-        }
-        }
-        
-        
-        .menu {
-            display: none; 
-        flex-direction: column;
-        border-radius: 20px;
-        box-shadow: inset;
-        position: absolute;
-        top:40px; 
-        right:5px;
-        z-index: 1;
-        width: 200px; 
-        padding: 10px 0;
-        display: none;
-            background-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        
-        }
-        
-        
-        
-        .menu a {
-            display: block;
-            color: black;
-            font-weight: bolder;
-            padding: 10px;
-            text-decoration: none;
-        }
-        
-        .menu a:hover {
-            background-color: #1abc9c;
-            color: white;
-        }
-        .dropdown:hover .menu {
-            display: block;
-        }
-        
-    
-    @media (max-width: 768px) {
-    .hover-button {
-        width: 100%; 
-    }
-    
-    .menu {
-        width: 100%; 
-        right: 0;
-    }
-    }
-    
+    position: fixed;
+    display: inline-block;
+    margin-left: 1300px;
+}
+
+.hover-button {
+    background-color: #f89009;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.514);
+    top: 40px;
+    right: 0;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    display: block;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: flex;
+}
+
 body {
     background-color: white;
     color: black;
