@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Events - Wahapahapa Waste Management</title>
+  <meta name="description" content="Discover Wahapahapa Waste Management's clean-up drives, environmental activities, and sustainable community events across the coast." />
+  <link rel="icon" type="image/png" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/past-events.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      background: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .gallery-item .info {
+      padding: 15px;
+    }
+
+    .gallery-item h3 {
+      color: #ff6a00;
+      font-size: 20px;
+      margin: 5px 0;
+    }
+
+    .gallery-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .see-details-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff6a00;
+      color: white;
+      border-radius: 25px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .see-details-btn:hover {
+      background: #eb4a0b;
+      transform: translateY(-2px);
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      width: 200px;
+      padding: 12px;
+      background: #1e1e1e;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #333;
+    }
+
+    /* --- Modal --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .modal-content h3 {
+      color: #ff6a00;
+      margin: 15px 0 10px;
+    }
+
+    .modal-content p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff6a00;
+      transition: transform 0.2s;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Past Events</h1>
+    <p>A look back at the amazing milestones we’ve achieved together.</p>
+  </header>
+
+  <section class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/cleanupday.jpg" alt="Cleanup Drive">
+      <div class="info">
+        <h3>Town Cleanup 2025</h3>
+        <p>Massive cleanup with over 200 volunteers.</p>
+        <a href="#" class="see-details-btn" data-event="cleanup">See Details</a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/treeplant2024.jpg" alt="Tree Planting">
+      <div class="info">
+        <h3>Tree Planting 2024</h3>
+        <p>Planted 500+ trees along Tiwi Beach and schools.</p>
+        <a href="#" class="see-details-btn" data-event="trees">See Details</a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/recycleexpo2024.jpg" alt="Recycling Expo">
+      <div class="info">
+        <h3>Zero Plastic Expo 2024</h3>
+        <p>Exhibited recycled art & eco innovations.</p>
+        <a href="#" class="see-details-btn" data-event="expo">See Details</a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/awarenesswalk.jpg" alt="Awareness Walk">
+      <div class="info">
+        <h3>Waste Awareness Walk</h3>
+        <p>Walked 3km spreading awareness on sorting waste.</p>
+        <a href="#" class="see-details-btn" data-event="walk">See Details</a>
+      </div>
+    </div>
+  </section>
+
+  <a href="events.html" class="back-btn">← Back to Events</a>
+
+  <!-- Modal -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <img src="" alt="Event Image" id="modalImage">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const details = {
+      cleanup: {
+        title: "Town Cleanup 2025",
+        img: "images/cleanupday.jpg",
+        desc: "Held on March 3rd, 2025, the Town Cleanup united more than 200 volunteers, including youth groups, boda riders, and municipal officers. Over 5 tonnes of waste were collected from Kombani market and surrounding areas, followed by awareness talks on waste separation."
+      },
+      trees: {
+        title: "Tree Planting 2024",
+        img: "images/treeplant2024.jpg",
+        desc: "In partnership with Tiwi schools and local communities, Wahapahapa planted over 500 trees along Tiwi Beach and within school compounds. The goal was to enhance coastal resilience and restore green cover."
+      },
+      expo: {
+        title: "Zero Plastic Expo 2024",
+        img: "images/recycleexpo2024.jpg",
+        desc: "The Zero Plastic Expo showcased recycled art, bags, and crafts made by local youth. The event attracted environmental stakeholders and encouraged creative recycling and circular economy initiatives."
+      },
+      walk: {
+        title: "Waste Awareness Walk",
+        img: "images/awarenesswalk.jpg",
+        desc: "This awareness walk engaged community members in Tiwi and Kombani, covering a 3km route. Participants distributed flyers, carried placards, and discussed practical steps for better waste management at the household level."
+      }
+    };
+
+    const modal = document.getElementById('eventModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const closeBtn = document.querySelector('.close-btn');
+
+    document.querySelectorAll('.see-details-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const key = btn.dataset.event;
+        const event = details[key];
+        modalImg.src = event.img;
+        modalTitle.textContent = event.title;
+        modalDesc.textContent = event.desc;
+        modal.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+  </script>
+</body>
+</html>
