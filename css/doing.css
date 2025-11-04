@@ -6,24 +6,107 @@ body {
   color: #333;
 }
 
-.home-button {
-  position: fixed; /* Stick to one corner */
-  top: 20px;
-  right: 20px;
-  background-color: #FF6A00; /* Orange or customize */
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-}
+/* Header styling */
+   header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      overflow: hidden;
+    }
 
-.home-button:hover {
-  background-color: #e65c00;
+    /* Fade and bounce animation */
+    @keyframes fadeBounce {
+      0% { opacity: 0; transform: translateY(-15px); }
+      50% { opacity: 1; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1, header p, header i {
+      opacity: 0;
+      animation: fadeBounce 0.9s ease forwards;
+    }
+
+    header h1 {
+      animation-delay: 0.2s;
+    }
+
+    header p {
+      animation-delay: 0.5s;
+    }
+
+    header i {
+      animation-delay: 0.1s;
+      color: #FF6A00;
+      transition: all 0.3s ease;
+    }
+
+    header i:hover {
+      color: #ff8533;
+      text-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+      transform: scale(1.2);
+    }
+
+    /* Home button floating */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #FF6A00;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 1001;
+    }
+
+    .home-button:hover {
+      background-color: #eb4a0b;
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+      header p {
+        font-size: 14px;
+      }
+    }
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .home-icon {
+    font-size: 22px;
+  }
 }
 
 
@@ -463,6 +546,73 @@ h2 {
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* Popup background overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.popup-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Form styling */
+.popup-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-box input, .popup-box textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-box button.send-btn {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.popup-box button.send-btn:hover {
+  background: #246b45;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 

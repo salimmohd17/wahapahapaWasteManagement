@@ -2,7 +2,7 @@
 body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #c5b9b9;
       color: #333;
     }
 /* Header styling */
@@ -111,7 +111,7 @@ body {
 
 .events-section {
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: #b6afaf;
   text-align: center;
   animation: fadeIn 1s ease-in;
 }
@@ -142,7 +142,7 @@ body {
 }
 
 .event-card {
-  background-color: #f9f9f9;
+  background-color: #c2b4b4;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -193,7 +193,7 @@ body {
 }
 
 .past-events-gallery {
-  background-color: #f4f4f4;
+  background-color: #c2b3b3;
   padding: 70px 20px;
   text-align: center;
   animation: fadeIn 1s ease-in;
@@ -301,7 +301,7 @@ body {
 .ongoing-activities {
   text-align: center;
   padding: 70px 20px;
-  background: #f4f4f4;
+  background: #c5bbbb;
 }
 
 .section-title {
@@ -330,7 +330,7 @@ body {
 }
 
 .activity-card {
-  background: white;
+  background: rgb(175, 167, 167);
   border-radius: 15px;
   overflow: hidden;
   width: 320px;
@@ -389,7 +389,7 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
-  background: #e8e8e8;
+  background: #f0e5e5;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -411,7 +411,7 @@ body {
 }
 
 .event-card {
-  background: white;
+  background: rgb(226, 220, 220);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 20px;
@@ -435,7 +435,7 @@ body {
 .cta {
   text-align: center;
   padding: 60px 20px;
-  background: #e3f2e8;
+  background: #e7f1eb;
 }
 
 .cta h2 {

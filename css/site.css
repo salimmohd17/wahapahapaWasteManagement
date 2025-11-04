@@ -251,7 +251,7 @@ h1 {
 }
 
 .message-section {
-    background-color: #f9f9f9;
+    background-color: #ece6e6;
     border: 2px solid;
     border-radius: 10px;
     padding: 30px;
@@ -520,7 +520,7 @@ h1 {
 }
 
 .modal-content {
-  background: #ffffff;
+  background: #c5bbbb;
   padding: 30px;
   max-width: 640px;
   width: 90%;
@@ -809,3 +809,4 @@ footer {
         text-align: center;
     }
 }
+

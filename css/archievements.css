@@ -114,7 +114,7 @@
     .achievement {
         padding: 12px; /* Adjusted padding */
         margin: 8px;
-        width: 48%; /* Adjusted width for small screens */
+        width: 80%; /* Adjusted width for small screens */
     }
 
     footer {
@@ -143,7 +143,7 @@
 body {
     background: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8)), url("wastemanagement.jpg");
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #d8c5c5;
     margin: 0;
     padding: 0;
     @media (max-width:768px){
@@ -255,37 +255,92 @@ header {
   }
 }
 
+/* --- NAVIGATION STYLING --- */
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #27ae60;
-    padding: 10px;
-    @media (max-width:768px){
-        .img{
-            width: 120px;
-        }
-    }
+  display: flex;
+  justify-content: center;
+  background-color: #27ae60;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  margin-top: 10px;
 }
+
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
-nav a:hover {
-    background-color: #2ecc71;
+
+nav a:hover,
+nav a.active {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
 }
+
+/* Fix sections being hidden under the header */
+html {
+  scroll-behavior: smooth;
+}
+
+section, 
+.content {
+  scroll-margin-top: 150px; 
+}
+
+
+/* --- RESPONSIVE NAV --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* --- SECTIONS STYLING --- */
+section {
+  display: none;
+  padding: 60px 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
     padding: 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
 .content {
-    background-color: white;
+    background-color: rgb(218, 206, 206);
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
     margin-bottom: 40px;
 }
 h2 {
@@ -303,11 +358,11 @@ p {
     flex-wrap: wrap;
 }
 .achievement {
-    background-color: #ecf0f1;
+    background-color: #c6cdcf;
     padding: 20px;
     margin: 10px;
     width: 30%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+   
     border-radius: 10px;
     @media (max-width:768px){
         .img{

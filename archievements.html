@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>archivements</title>
+    <title>Archivements|wahapahapa waste management</title>
     <meta name="description" content="Discover Wahapahapa Waste Management's clean-up drives, environmental activities, and sustainable community events across the coast." />
   <link rel="icon" type="image/png" href="logo.jpg" />
   <link rel="apple-touch-icon" href="logo.png" />
@@ -22,6 +22,29 @@
     <h1><i data-lucide="award"></i> Achievements & Milestones</h1>
     <p><i data-lucide="sparkles"></i> Celebrating our impactful progress and community-driven success stories in waste management.</p>
   </div>
+
+<nav>
+        <a href="#impacts">Environmental Impacts</a>
+        <a href="#achievements">Our Achievements</a>
+        <a href="#join">Join Us</a>
+    </nav>
+<script>
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    const headerHeight = document.querySelector(".achievements-header").offsetHeight;
+
+    window.scrollTo({
+      top: target.offsetTop - headerHeight,
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
 </header>
 
 <script>
@@ -30,11 +53,7 @@
 
 
 <body>
-    <nav>
-        <a href="#impacts">Environmental Impacts</a>
-        <a href="#achievements">Our Achievements</a>
-        <a href="#join">Join Us</a>
-    </nav>
+    
 
     <div class="container">
         <div class="content" id="impacts">
@@ -112,7 +131,7 @@
               <a href="#">Newsletter</a>
             </div>
             <p>© Copyright WAHAPAHAPA WASTE MANAGEMENT 2025, All Rights Reserved</p>
-            <a href="site.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+            <a href="archievements.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
           </div>
       </footer>
    <script src="nio.js"></script>
