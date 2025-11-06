@@ -1,0 +1,236 @@
+/* --- NEWSLETTER PAGE STYLES --- */
+body.newsletter {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(129, 127, 127, 0.2), rgba(138, 134, 134, 0.3)), url('background.jpg') no-repeat center center/cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #05702e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+.newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    gap: 40px;
+}
+
+.newsletter-info {
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #05702e;
+}
+
+.newsletter-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #05702e;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #1abc9c;
+}
+
+.newsletter-form button {
+    background-color: #05702e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #1abc9c;
+}
+
+.success-message {
+    color: #1abc9c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 30px 20px;
+    }
+
+    .newsletter-info, .newsletter-form {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter-info h2 {
+        font-size: 28px;
+    }
+
+    .newsletter-info p {
+        font-size: 15px;
+    }
+}
+/* Popup Modal */
+.popup-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.popup-form input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-form button:hover {
+  background-color: #2ecc71;
+}
+.newsletter-section {
+  background: #f7f9fb;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter-container h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.newsletter-container p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1 1 250px;
+  max-width: 400px;
+}
+
+.newsletter-form button {
+  padding: 12px 25px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #2ecc71;
+}
+
+.newsletter-note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #888;
+}

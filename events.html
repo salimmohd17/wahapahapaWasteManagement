@@ -67,15 +67,61 @@
 
 <section class="past-events-gallery">
   <h2>Past Events Highlights</h2>
+<!-- Mazingira Day Event Card -->
+<div class="event-item">
+  <a href="#" class="open-popup" data-popup="mazingira-day">
+    <img src="images/mazingira-day.jpg" alt="Mazingira Day Celebration">
+  </a>
+  <p>Mazingira Day at Congo Beach – cleanup, tree planting, and youth environmental awareness.</p>
+</div>
 
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="images/cleanupday.jpg" alt="Cleanup Drive">
-      <div class="overlay">
-        <h3>Town Cleanup 2025</h3>
-        <p>Over 200 volunteers joined to clean Kombani streets and markets.</p>
-      </div>
+<!-- Mazingira Day Popup -->
+<div id="mazingira-day" class="popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>National Mazingira Day Celebration – 10th October 2025</h2>
+    <img src="images/mazingira-day-banner.jpg" alt="Mazingira Day Celebration" class="popup-banner">
+
+    <p>On 10th October 2025, Wahapahapa Waste Management participated in the National Mazingira Day celebrations at Congo Beach, Diani. The event was graced by Hon. Ababu Namwamba, the Cabinet Secretary for Sports, Youth, and the Arts, and attended by organizations including Heri Kenya, Green Minds, Kwale Recyclers, and several local schools.</p>
+
+    <p>During the event, the team led a beach cleanup exercise that resulted in the collection of <strong>78 kilograms of waste</strong> and the planting of <strong>115 mangrove trees</strong> along the shorelines. Wahapahapa also set up an exhibition booth displaying recycled products such as handbags, baskets, and creative upcycled items, demonstrating the economic value of waste materials.</p>
+
+    <p>The event drew a total of <strong>244 participants</strong> (125 adults and 119 students). Key messages focused on climate change awareness, unity in environmental action, and partnerships for sustainability. The success of the day elevated Wahapahapa’s reputation as a youth-led champion in environmental conservation.</p>
+
+    <div class="popup-gallery">
+      <img src="images/mazingira1.jpg" alt="Cleanup team">
+      <img src="images/mazingira2.jpg" alt="Mangrove planting">
+      <img src="images/mazingira3.jpg" alt="Exhibition booth">
     </div>
+  </div>
+</div>
+<script>
+  // Open popup
+  document.querySelectorAll('.open-popup').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const popupId = this.getAttribute('data-popup');
+      document.getElementById(popupId).style.display = 'block';
+      document.body.style.overflow = 'hidden'; // disable background scroll
+    });
+  });
+
+  // Close popup when clicking X
+  document.querySelectorAll('.close-popup').forEach(btn => {
+    btn.addEventListener('click', function () {
+      this.closest('.popup').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Close popup when clicking outside content
+  window.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup')) {
+      e.target.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
 
     <div class="gallery-item">
       <img src="images/treeplant2024.jpg" alt="Tree Planting">

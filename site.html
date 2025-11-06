@@ -23,7 +23,7 @@
         <nav class="options">
           <a href="doing.html" class="nav-button">About Us</a>
             <a href="events.html" class="nav-button">Events</a>
-            <a href="emerging issues.html" class="nav-button">adressed issues</a>
+           
             <a href="archievements.html" class="nav-button">Achievements</a>
         </nav>
     
@@ -32,11 +32,26 @@
         <i class="fas fa-bars"></i>
     </button>
     <div id="dropdownmenu" class="menu">
-        <a href="contact.html">Contact</a>
-        <a href="public recycle.html">public recycling stations</a>
+       <a href="emerging issues.html" class="nav-button">adressed issues</a>
+       <a href="public recycle.html">public recycling stations</a>
         <a href="residentials.html">residential collection</a>
+        <a href="contact.html">Contact</a>
     </div>
 </div>   
+<script>
+  const dropdownButton = document.getElementById("dropdownmenubutton");
+  const dropdownMenu = document.getElementById("dropdownmenu");
+
+  dropdownButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", () => {
+    dropdownMenu.classList.remove("show");
+  });
+</script>
+
     </header>
   
    
@@ -139,18 +154,13 @@
         <p>Ukunda Event with Kwale Recece – community awareness and innovation showcase.</p>
       </div>
 
-      <div class="event-item">
-        <a href="wahapahapa-launch.html">
-          <img src="images/launch-event.jpg" alt="Wahapahapa Launch" />
-        </a>
-        <p>Official launch of Wahapahapa Waste Management – united for cleaner communities.</p>
-      </div>
-       <div class="event-item">
-        <a href="event-ukunda-kwale-recycle.html">
-          <img src="images/ukundaevent.jpg" alt="Ukunda Kwale Recece Event" />
-        </a>
-        <p>Ukunda Event with Kwale Recece – community awareness and innovation showcase.</p>
-      </div>
+     <div class="event-item">
+  <a href="mazingira-day.html">
+    <img src="images/mazingira-day.jpg" alt="Mazingira Day Celebration" />
+  </a>
+  <p>Mazingira Day at Congo Beach – beach cleanup, tree planting, and youth-led environmental awareness.</p>
+</div>
+
 
       <div class="event-item">
         <a href="wahapahapa-launch.html">
@@ -279,6 +289,64 @@
   </div>
 </div>
 
+<script>
+document.querySelectorAll('.events-section .events-grid').forEach(grid => {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Drag with mouse
+  grid.addEventListener('mousedown', e => {
+    isDown = true;
+    grid.classList.add('dragging');
+    startX = e.pageX - grid.offsetLeft;
+    scrollLeft = grid.scrollLeft;
+  });
+
+  grid.addEventListener('mouseleave', () => {
+    isDown = false;
+    grid.classList.remove('dragging');
+  });
+
+  grid.addEventListener('mouseup', () => {
+    isDown = false;
+    grid.classList.remove('dragging');
+  });
+
+  grid.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - grid.offsetLeft;
+    const walk = x - startX;
+    grid.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch swipe
+  let touchStartX = 0;
+  grid.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    scrollLeft = grid.scrollLeft;
+  });
+
+  grid.addEventListener('touchmove', e => {
+    const x = e.touches[0].clientX;
+    const walk = x - touchStartX;
+    grid.scrollLeft = scrollLeft - walk;
+  });
+});
+
+// --- Arrow button scrolling ---
+function scrollTeam(direction, btn) {
+  const section = btn.closest('.events-section');
+  const grid = section.querySelector('.events-grid');
+  const scrollAmount = 300; // adjust scroll distance per click
+  grid.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
+
 
     <footer>
         <div class="footer-top">
@@ -314,7 +382,7 @@
               <a href="imprint.html">Imprint</a> |
               <a href="privacypolicy.html">Privacy Policy</a> |
               <a href="contact.html">Contact</a> |
-              <a href="#">Newsletter</a>
+              <a href="newsletter.html">Newsletter</a>
             </div>
             <p>© Copyright WAHAPAHAPA WASTE MANAGEMENT 2025, All Rights Reserved</p>
             <a href="site.html" class="back-to-top"><i class="fas fa-chevron-up"></i></a>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Wahapahapa Waste Management</title> 
+    <meta name="description" content="Subscribe to Wahapahapa Waste Management's newsletter for updates on clean-up drives, environmental activities, and community events." />
+    <link rel="icon" type="image/png" href="logo.jpg" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="stylesheet" href="css/contact.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="site.html" class="home-button" title="Go to Home">
+    <i data-lucide="home"></i>
+  </a>
+
+  <div class="header-content">
+    <h1><i data-lucide="mail"></i> Newsletter Subscription</h1>
+    <p><i data-lucide="message-circle"></i> Stay updated with our latest clean-up drives, events, and community initiatives. Join our newsletter!</p>
+  </div>
+</header>
+
+<script>
+  lucide.createIcons();
+</script>
+
+<!-- Newsletter Popup Modal -->
+<div id="newsletterPopup" class="popup-modal">
+  <div class="popup-content">
+    <span class="popup-close" id="popupClose">&times;</span>
+    <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest Wahapahapa events, cleanups, and initiatives. Enter your email below and join our community!</p>
+    <form action="https://formspree.io/f/xzzdkvaw" method="POST" class="popup-form">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+        <p class="newsletter-note">We respect your privacy. Your email will only be used to send updates and news from Wahapahapa Waste Management.</p>
+
+  </div>
+</div>
+<script>
+    // Newsletter Popup Script
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("newsletterPopup");
+
+
+  // Show popup after 5 seconds
+  setTimeout(() => {
+    popup.style.display = "block";
+  }, 5000);
+
+
+  // Close popup if clicking outside the modal content
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
+
+</script>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-column">
+          <h3>Wahapahapa Waste Management</h3>
+          <p>We are a youth-led initiative in Kwale County, Kenya, committed to environmental conservation, community-led waste collection, and sustainable development.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Connect With Us</h3>
+          <p>
+            Address: P.O. Box 161-80403, Kombani, Kwale<br>
+            Phone: +254 707 776 468<br>
+            Email: <a href="mailto:wahapahapawastemanagement@gmail.com">wahapahapawastemanagement@gmail.com</a>
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Important Links</h3>
+          <p><a href="#">Events Pictures</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div>
+            <a href="imprint.html">Imprint</a> |
+            <a href="privacypolicy.html">Privacy Policy</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="#">Newsletter</a>
+        </div>
+        <p>© 2025 Wahapahapa Waste Management. All Rights Reserved.</p>
+        <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </div>
+</footer>
+
+<script>
+  const form = document.getElementById('newsletterForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      successMessage.style.display = 'block';
+      form.reset();
+    } else {
+      alert('Oops! Something went wrong. Please try again.');
+    }
+  });
+</script>
+
+</body>
+</html>

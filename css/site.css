@@ -8,18 +8,19 @@
         header {
           flex-direction: column;
           align-items: center;
-          
+          position: static !important; 
+        top: auto !important;
         }
       .intro-head{
         display: block;
-        font-size: 1px;
+        font-size: 0.8px;
         margin: 0.5rem 0;
         margin-right: 100px;
         
       }
         header img {
           width: 80px;
-          margin-bottom: 1rem;
+          margin-bottom: -2.5rem;
         }
       
         nav.options {
@@ -29,20 +30,17 @@
         }
       
         nav.options a {
-          margin: 0.5rem 0;
-          font-size: 16px;
+         
+          font-size: 12px;
         }
       
         .dropdown {
-          position: static;
+          position: relative;
           margin-top: 1rem;
+          margin-left: 1000px;
+          
         }
       
-        .hover-button {
-          width: 100%;
-          padding: 10px;
-          font-size: 16px;
-        }
       
         .menu {
           position: static;
@@ -134,26 +132,48 @@ body.main {
     }
 
 header {
-  position: relative;
-  margin-top: -10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
     width: 100%;
-    background-color: #2b0902e0;
-    color: rgb(44, 147, 231);
+    background-color: #05702e;
+    color: rgb(118, 187, 243);
     padding: 0px;
-  
-   
 }
 
-.content {
-}
+@keyframes fadeBounce {
+      0% { opacity: 0; transform: translateY(-15px); }
+      50% { opacity: 1; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
+    .logo-container, .dropdown, .options{
+opacity: 0;
+      animation: fadeBounce 0.9s ease forwards;
+    }
+    .logo-container{
+ animation-delay: 0.2s;
+    }
+.dropdown{
+animation-delay: 0.4s;
+}
+.options{
+ animation-delay: 0.1s;
+      transition: all 0.3s ease;
+}
+body.main{
+  animation-delay: 0.6s;
+  transition: all 0.4s ease;
+}
 header img {
     width: 100px;
+    border: solid;
 }
 .logo-container {
     display: flex;
     flex-direction: inherit;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     text-align: center;
 }
 
@@ -163,28 +183,60 @@ header img {
     border-radius: 50%;
     object-fit: cover;
     display: fixed;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+nav.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: transparent;
 }
 
 nav.options a {
-    margin: 0 15px;
-    padding: 30px;
+    margin: 0 17px;
+    padding: 35px;
     color: whitesmoke;
-    text-decoration: solid;
+    text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 nav.options a:hover {
     color: #1abc9c;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav.options a {
+        font-size: 16px;
+        padding: 15px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav.options {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav.options a {
+        font-size: 14px;
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
+
+
 .dropdown {
-    position: relative;
-    display: inline-block; 
-    margin-left: 1400px;
-    margin-bottom: 2px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }
 
 .hover-button {
@@ -200,43 +252,35 @@ nav.options a:hover {
 .menu {
     display: none;
     position: absolute;
-    background-color: rgba(95, 177, 245, 0.452);
+    background-color: rgba(1, 21, 36, 0.527);
     top: 40px;
     right: 0;
-    width: 150px;
+    width: 180px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(34, 33, 33, 0.1);
+    flex-direction: column;
+    z-index: 100;
 }
 
 .menu a {
     display: block;
-    font-weight: bolder;
-    color: black;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(241, 224, 224);
     padding: 10px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .menu a:hover {
-    background-color: #ddd;
+    background-color: #b1a8a8;
 }
 
 .show {
     display: flex;
+    flex-direction: column;
 }
 
-.navigation-arrows {
-    display: flex;
-    gap: 10px;
-}
-
-.arrow {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 h1 {
     font-size: 18px;
@@ -249,36 +293,6 @@ h1 {
     margin: 20px 0;
     animation: fadeIn 3s;
 }
-
-.message-section {
-    background-color: #ece6e6;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.message-section p {
-    color: #333;
-}
-
-.message-section h2 {
-    color: #4CAF50;
-}
-
-.message-section p span {
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-.message-section p:first-of-type {
-    font-weight: bold;
-    font-size: 28px;
-}
-
 
 .banner-section {
   text-align: center;
@@ -294,6 +308,43 @@ h1 {
 
 
 /* --- EVENTS SECTION --- */
+
+.events-section .events-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.events-section .events-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.events-section .event-item {
+  flex: 0 0 auto;
+  width: 250px;
+  text-align: center;
+}
+
+.events-section .event-item img,
+.events-section .event-item video {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .events-section .event-item {
+    width: 220px;
+  }
+}
+
+
+
 .events-section {
   background-color: #ffffff6e;
   padding: 10px 5px;
@@ -809,4 +860,3 @@ footer {
         text-align: center;
     }
 }
-
